@@ -1,17 +1,19 @@
 package com.dubek.game.states;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.dubek.game.FlappyDemo;
+import com.dubek.game.sprites.Bird;
 
 /**
  * Created by Luka on 5.6.2016..
  */
 public class PlayState extends State {
-    private Texture bird;
+    private Bird bird;
 
     public PlayState(GameStateManager gsm) {
         super(gsm);
-        bird = new Texture("bird.png");
+        bird = new Bird(50, 300);
+        cam.setToOrtho(false, FlappyDemo.WIDTH / 2, FlappyDemo.HEIGHT / 2);
     }
 
     @Override
@@ -21,13 +23,15 @@ public class PlayState extends State {
 
     @Override
     public void update(float dt) {
-
+        handleInput();
+        bird.update(dt);
     }
 
     @Override
     public void render(SpriteBatch sb) {
+        sb.setProjectionMatrix(cam.combined);
         sb.begin();
-        sb.draw(bird, 50,50);
+        sb.draw(bird.getTexture(), bird.getPosition().x, bird.getPosition().y);
         sb.end();
     }
 
