@@ -1,4 +1,4 @@
-package com.dubek.game.desktop.States;
+package com.dubek.game.States;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
