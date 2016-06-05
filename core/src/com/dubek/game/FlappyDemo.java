@@ -4,8 +4,8 @@ import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.dubek.game.States.GameStateManager;
-import com.dubek.game.States.MenuState;
+import com.dubek.game.states.GameStateManager;
+import com.dubek.game.states.MenuState;
 
 public class FlappyDemo extends ApplicationAdapter {
     public static final int WIDTH = 480;

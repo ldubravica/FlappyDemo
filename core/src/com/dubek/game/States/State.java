@@ -1,4 +1,4 @@
-package com.dubek.game.States;
+package com.dubek.game.states;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -18,7 +18,8 @@ public abstract class State {
         mouse = new Vector3();
     }
 
-    protected abstract void handle();
+    protected abstract void handleInput();
     public abstract void update(float dt);
     public abstract void render(SpriteBatch sb);
+    public abstract void dispose();
 }
