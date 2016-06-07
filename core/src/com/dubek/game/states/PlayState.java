@@ -28,8 +28,8 @@ public class PlayState extends State {
         super(gsm);
         bird = new Bird(50, 300);
         cam.setToOrtho(false, FlappyDemo.WIDTH / 2, FlappyDemo.HEIGHT / 2);
-        bg = new Texture("bg.png");
-        ground = new Texture("ground.png");
+        bg = new Texture(Gdx.files.internal("bg.png"));
+        ground = new Texture(Gdx.files.internal("ground.png"));
         groundPos1 = new Vector2(cam.position.x - cam.viewportWidth / 2, GROUND_Y_OFFSET);
         groundPos2 = new Vector2((cam.position.x - cam.viewportWidth / 2) + ground.getWidth(), GROUND_Y_OFFSET);
 

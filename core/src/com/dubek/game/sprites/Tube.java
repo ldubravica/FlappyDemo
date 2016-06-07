@@ -1,5 +1,6 @@
 package com.dubek.game.sprites;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
@@ -22,8 +23,8 @@ public class Tube {
     private Random rand;
 
     public Tube(float x){
-        topTube = new Texture("toptube.png");
-        bottomTube = new Texture("bottomtube.png");
+        topTube = new Texture(Gdx.files.internal("toptube.png"));
+        bottomTube = new Texture(Gdx.files.internal("bottomtube.png"));
         rand = new Random();
 
         posTopTube = new Vector2(x, rand.nextInt(FLUCTUATION) + TUBE_GAP + LOWEST_OPENING);
